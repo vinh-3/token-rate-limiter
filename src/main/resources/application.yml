@@ -1,0 +1,8 @@
+token_rate_limiter:
+  rate_limits:
+    - key: GLOBAL
+      refill_rate: 100
+      capacity: 10000
+    - key: NOTIFICATIONS
+      refill_rate: 10
+      capacity: 1200
