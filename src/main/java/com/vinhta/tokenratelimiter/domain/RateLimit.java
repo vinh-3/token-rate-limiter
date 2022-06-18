@@ -1,8 +1,8 @@
-package com.vinhta.tokenratelimiter.config;
+package com.vinhta.tokenratelimiter.domain;
 
 import org.springframework.boot.context.properties.ConstructorBinding;
 
-import static com.vinhta.tokenratelimiter.config.Constants.GLOBAL_RATE_LIMIT_KEY;
+import static com.vinhta.tokenratelimiter.config.Constants.GLOBAL_KEY;
 
 @ConstructorBinding
 public record RateLimit (
@@ -12,7 +12,7 @@ public record RateLimit (
 ) {
 
     public boolean isGlobal() {
-        return key.equals(GLOBAL_RATE_LIMIT_KEY);
+        return key.equals(GLOBAL_KEY);
     }
 
 }

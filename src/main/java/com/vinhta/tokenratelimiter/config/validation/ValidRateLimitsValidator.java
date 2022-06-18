@@ -1,6 +1,6 @@
 package com.vinhta.tokenratelimiter.config.validation;
 
-import com.vinhta.tokenratelimiter.config.RateLimit;
+import com.vinhta.tokenratelimiter.domain.RateLimit;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

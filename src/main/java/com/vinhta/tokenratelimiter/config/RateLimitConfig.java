@@ -2,6 +2,7 @@ package com.vinhta.tokenratelimiter.config;
 
 import com.vinhta.tokenratelimiter.config.validation.ValidRateLimits;
 
+import com.vinhta.tokenratelimiter.domain.RateLimit;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
