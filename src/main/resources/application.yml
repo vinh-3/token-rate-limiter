@@ -1,8 +1,8 @@
 token_rate_limiter:
   rate_limits:
-    - key: GLOBAL
-      refill_rate: 100
-      capacity: 10000
-    - key: NOTIFICATIONS
+    - key: global
       refill_rate: 10
-      capacity: 1200
+      capacity: 10
+    - key: notifications
+      refill_rate: 5
+      capacity: 5

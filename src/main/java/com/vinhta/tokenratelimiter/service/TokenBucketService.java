@@ -5,6 +5,7 @@ import com.vinhta.tokenratelimiter.domain.RateLimit;
 import com.vinhta.tokenratelimiter.domain.TokenBucket;
 import com.vinhta.tokenratelimiter.exception.RateLimitKeyNotFoundException;
 
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -39,7 +40,9 @@ public class TokenBucketService {
         return tokenBucket.tryAcquireTokenAndGetRemaining();
     }
 
+    @Scheduled(fixedRate = 1000)
     private void refillBuckets() {
+        System.out.println("refill");
         tokenBuckets.values()
                 .forEach(TokenBucket::refill);
     }

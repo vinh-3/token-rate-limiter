@@ -1,15 +1,10 @@
 package com.vinhta.tokenratelimiter.service;
 
-import com.vinhta.tokenratelimiter.config.RateLimitConfig;
 import com.vinhta.tokenratelimiter.controller.RateLimitResponseDTO;
-import com.vinhta.tokenratelimiter.domain.RateLimit;
 import com.vinhta.tokenratelimiter.exception.FailedToAcquireTokenException;
 import com.vinhta.tokenratelimiter.exception.RateLimitKeyNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.Set;
-import java.util.stream.Collectors;
 
 
 @Service
