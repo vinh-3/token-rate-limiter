@@ -42,7 +42,6 @@ public class TokenBucketService {
 
     @Scheduled(fixedRate = 1000)
     private void refillBuckets() {
-        System.out.println("refill");
         tokenBuckets.values()
                 .forEach(TokenBucket::refill);
     }
