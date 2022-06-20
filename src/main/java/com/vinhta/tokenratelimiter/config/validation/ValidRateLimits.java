@@ -15,8 +15,8 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Constraint(validatedBy = ValidRateLimitsValidator.class)
 public @interface ValidRateLimits {
 
-    String message() default "rate_limits must include a 'GLOBAL' key. Additionally, the 'refill_rate' and 'capacity' of "
-            + "other rate limits must not exceed the 'GLOBAL' rate limit.";
+    String message() default "rate_limits must include a 'global' key. Additionally, the 'refill_rate' and 'capacity' of "
+            + "other rate limits must not exceed the 'global' rate limit.";
 
     Class<?>[] groups() default {};
 
