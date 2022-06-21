@@ -6,11 +6,8 @@ import java.util.Optional;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-
+@Getter
 public class TokenBucket {
-
-    @Getter
-    private final String key;
 
     private final int capacity;
 
@@ -20,8 +17,7 @@ public class TokenBucket {
 
     private volatile int tokens = 0;
 
-    private TokenBucket(String key, int capacity, int refillRate) {
-        this.key = key;
+    private TokenBucket(int capacity, int refillRate) {
         this.capacity = capacity;
         this.refillRate = refillRate;
     }
@@ -56,7 +52,7 @@ public class TokenBucket {
     }
 
     public static TokenBucket from(RateLimit rateLimit) {
-        return new TokenBucket(rateLimit.key(), rateLimit.capacity(), rateLimit.refillRate());
+        return new TokenBucket(rateLimit.capacity(), rateLimit.refillRate());
     }
 
 }

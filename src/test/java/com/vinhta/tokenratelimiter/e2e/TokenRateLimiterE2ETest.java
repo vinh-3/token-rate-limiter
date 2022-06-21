@@ -7,7 +7,23 @@ import org.springframework.boot.test.context.SpringBootTest;
 class TokenRateLimiterE2ETest {
 
 	@Test
-	void contextLoads() {
+	void rateLimitGlobalRequest_whenTokensRemaining_returnRemainingTokens() {
+	}
+
+	@Test
+	void rateLimitGlobalRequest_whenNoTokensRemaining_throws429() {
+	}
+
+	@Test
+	void rateLimitKeyedRequest_whenTokensRemaining_returnRemainingTokens() {
+	}
+
+	@Test
+	void rateLimitKeyedRequest_whenNoTokensRemaining_throws429() {
+	}
+
+	@Test
+	void rateLimitKeyedRequest_withInvalidKey_throws404() {
 	}
 
 }
