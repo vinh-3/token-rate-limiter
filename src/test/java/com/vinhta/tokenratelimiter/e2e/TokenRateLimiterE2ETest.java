@@ -1,13 +1,21 @@
 package com.vinhta.tokenratelimiter.e2e;
 
+import com.vinhta.tokenratelimiter.e2e.feign.RateLimiterClient;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class TokenRateLimiterE2ETest {
+
+
+
+	@Autowired
+	private RateLimiterClient rateLimiterClient;
 
 	@Test
 	void rateLimitGlobalRequest_whenTokensRemaining_returnRemainingTokens() {
+		rateLimiterClient.rateLimitGlobalRequest();
 	}
 
 	@Test

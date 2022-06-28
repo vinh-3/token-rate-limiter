@@ -1,0 +1,16 @@
+server:
+  port: 3030
+
+token_rate_limiter:
+  rate_limits:
+    - key: global
+      refill_rate: 2
+      capacity: 2
+    - key: notifications
+      refill_rate: 2
+      capacity: 2
+
+feign:
+  client:
+    config:
+      ratelimiter: localhost:3030
