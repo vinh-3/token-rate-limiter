@@ -20,6 +20,7 @@ public class TokenBucket {
     private TokenBucket(int capacity, int refillRate) {
         this.capacity = capacity;
         this.refillRate = refillRate;
+        this.tokens = capacity;
     }
 
     public Optional<Integer> tryAcquireTokenAndGetRemaining() {
