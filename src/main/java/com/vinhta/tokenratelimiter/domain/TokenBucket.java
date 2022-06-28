@@ -15,7 +15,7 @@ public class TokenBucket {
 
     private final Lock lock = new ReentrantLock();
 
-    private volatile int tokens = 0;
+    private volatile int tokens;
 
     private TokenBucket(int capacity, int refillRate) {
         this.capacity = capacity;
